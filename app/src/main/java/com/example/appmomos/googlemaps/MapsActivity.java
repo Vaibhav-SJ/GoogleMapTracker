@@ -24,6 +24,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.Map;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -58,6 +60,7 @@ public class MapsActivity extends FragmentActivity implements
     public final static int TAG_PERMISSION_CODE=1;
 
 
+    private static long back_pressed;
 
 
     @Override
@@ -240,6 +243,39 @@ public class MapsActivity extends FragmentActivity implements
            // moveMap();
         }
     }
+
+
+
+
+
+    // on back button press function
+    @Override
+    public void onBackPressed()
+    {
+        if (back_pressed + 2000 > System.currentTimeMillis())
+        {
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+        else
+        {
+            Toast.makeText(MapsActivity.this,getResources().getString(R.string.exitConfoMsg),Toast.LENGTH_SHORT).show();
+        }
+
+        back_pressed = System.currentTimeMillis();
+
+    }
+
+
+
+
+
+
+
+
 }
 
 

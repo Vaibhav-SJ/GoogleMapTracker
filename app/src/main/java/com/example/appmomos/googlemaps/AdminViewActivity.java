@@ -229,12 +229,12 @@ public   class AdminViewActivity extends AppCompatActivity implements
     @Override
     public void onMapLongClick(LatLng latLng) {
         //Clearing all the markers
-        mMap.clear();
+        /*mMap.clear();
 
         //Adding a new marker to the current pressed position
         mMap.addMarker(new MarkerOptions()
                 .position(latLng)
-                .draggable(false));// false means not dragable and true means map icon draggable
+                .draggable(false));// false means not dragable and true means map icon draggable*/
     }
 
     @Override

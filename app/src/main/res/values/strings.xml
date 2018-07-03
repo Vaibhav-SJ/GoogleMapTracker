@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">GoogleMaps</string>
+    <string name="app_name">Tracker</string>
     <string name="title_activity_maps">Map</string>
+    <string name="exitConfoMsg">Press once again to exit!</string>
 </resources>
