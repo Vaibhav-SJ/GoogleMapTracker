@@ -33,20 +33,11 @@
                 android:background="@drawable/current"
                 tools:ignore="ContentDescription" />
 
-            <ImageButton
-                android:id="@+id/buttonSave"
-                android:layout_width="50dp"
-                android:visibility="invisible"
-                android:layout_height="50dp"
-                android:layout_margin="15dp"
-                android:background="@drawable/save"
-                tools:ignore="ContentDescription" />
-
 
             <ImageButton
                 android:id="@+id/buttonView"
                 android:layout_width="50dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 android:layout_height="50dp"
                 android:layout_margin="15dp"
                 android:background="@drawable/view"
